@@ -1,0 +1,53 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Главная", 
+		"/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Новости", 
+		"/news/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Диагностика", 
+		"/diagnostics/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Наши врачи", 
+		"/doctor/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Операции", 
+		"/operations/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Услуги", 
+		"/service/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"О нас", 
+		"/about/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>
