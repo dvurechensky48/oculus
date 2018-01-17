@@ -1,5 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("title", "Главная");
 $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 ?><div id="content">
 	 <?$APPLICATION->IncludeComponent(
@@ -82,7 +83,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
  <span class="color-ser">4742</span> <span class="color-blue">37 04 04</span>
 						</div>
 						<div class="margin-top-3">
- <a data-toggle="modal" data-target="#myModal" style="cursor:pointer;" class="button1">Запись онлайн</a>
+							 <a data-toggle="modal" data-target="#myModal" style="cursor:pointer;" class="button1" >Запись онлайн</a>
 						</div>
 					</div>
 					<div class="image">
@@ -117,10 +118,10 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 	</div>
  </section> <section id="akcii" class="white big">
 	<div class="container">
-		<div class="row">
-			<h2 class="caption">Акции и спецпредложения</h2>
-			<div class="margin-top-3">
-				 <?$APPLICATION->IncludeComponent(
+		<h2 class="caption">Акции и спецпредложения<br>
+ </h2>
+		<div class="margin-top-3">
+			 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"akcii-main",
 	Array(
@@ -177,65 +178,52 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 		"STRICT_SECTION_CHECK" => "N"
 	)
 );?>
-				<div class="clearfix">
-				</div>
+			<div class="clearfix">
 			</div>
-			<div class="all-center margin-top-4">
+		</div>
+		<div class="all-center margin-top-4">
  <a href="#">Все акции</a>
-			</div>
 		</div>
 	</div>
  </section> <section id="priem" class="white unique blueseparator">
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12 hidden-lg hidden-md">
-				<div class="title-m all-center hidden-lg hidden-md">
-                    <span>Запись на прием</span>
-                </div>
-				<div class="form-m margin-top-2 hidden-lg hidden-md">
-					<form>
-						<div>
- <input class="zapis" type="text" name="" placeholder="Ваше имя">
-						</div>
-						<div class="margin-top-4">
- <input class="zapis" type="text" name="" placeholder="Ваше имя">
-						</div>
-						<div class="margin-top-4">
- <input class="zapis" type="text" name="" placeholder="Ваше имя">
-						</div>
-						<div class="margin-top-4">
- <input class="zapis" type="text" name="" placeholder="Ваше имя">
-						</div>
-						<div class="all-center margin-top-4">
- <input type="submit" class="button1" value="Отправить" name="">
-						</div>
-					</form>
-				</div>
-			</div>
-			<div class="col-xs-offset-1 col-xs-10 hidden-sm hidden-xs">
-				<div class="title all-center hidden-sm hidden-xs">
-					<span>Запись на прием</span>
-				</div>
-				<div class="form hidden-sm hidden-xs">
-					<form>
-						<div>
- <input class="zapis" type="text" name="" placeholder="Ваше имя">
-						</div>
-						<div class="margin-top-4">
- <input class="zapis" type="text" name="" placeholder="Ваше имя">
-						</div>
-						<div class="margin-top-4">
- <input class="zapis" type="text" name="" placeholder="Ваше имя">
-						</div>
-						<div class="margin-top-4">
- <input class="zapis" type="text" name="" placeholder="Ваше имя">
-						</div>
-						<div class="all-center margin-top-4">
- <input type="submit" class="button1" value="Отправить" name="">
-						</div>
-					</form>
-				</div>
-			</div>
+			 <?$APPLICATION->IncludeComponent(
+	"bitrix:iblock.element.add.form",
+	"form",
+	Array(
+		"CUSTOM_TITLE_DATE_ACTIVE_FROM" => "",
+		"CUSTOM_TITLE_DATE_ACTIVE_TO" => "",
+		"CUSTOM_TITLE_DETAIL_PICTURE" => "",
+		"CUSTOM_TITLE_DETAIL_TEXT" => "",
+		"CUSTOM_TITLE_IBLOCK_SECTION" => "",
+		"CUSTOM_TITLE_NAME" => "",
+		"CUSTOM_TITLE_PREVIEW_PICTURE" => "",
+		"CUSTOM_TITLE_PREVIEW_TEXT" => "",
+		"CUSTOM_TITLE_TAGS" => "",
+		"DEFAULT_INPUT_SIZE" => "30",
+		"DETAIL_TEXT_USE_HTML_EDITOR" => "N",
+		"ELEMENT_ASSOC" => "CREATED_BY",
+		"GROUPS" => array("2"),
+		"IBLOCK_ID" => "8",
+		"IBLOCK_TYPE" => "feedback",
+		"LEVEL_LAST" => "Y",
+		"LIST_URL" => "",
+		"MAX_FILE_SIZE" => "0",
+		"MAX_LEVELS" => "100000",
+		"MAX_USER_ENTRIES" => "100000",
+		"PREVIEW_TEXT_USE_HTML_EDITOR" => "N",
+		"PROPERTY_CODES" => array("24","25","26","27","NAME"),
+		"PROPERTY_CODES_REQUIRED" => array("24","25"),
+		"RESIZE_IMAGES" => "N",
+		"SEF_MODE" => "N",
+		"STATUS" => "ANY",
+		"STATUS_NEW" => "N",
+		"USER_MESSAGE_ADD" => "",
+		"USER_MESSAGE_EDIT" => "",
+		"USE_CAPTCHA" => "N"
+	)
+);?>
 			<div class="clearfix">
 			</div>
 		</div>
@@ -244,7 +232,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 all-right">
- <img src="<?= SITE_TEMPLATE_PATH ?>/img/vr2.png">
+ <img src="/local/templates/oculus/img/vr2.png">
 				</div>
 			</div>
 		</div>
@@ -386,26 +374,50 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 			</div>
 		</div>
 	</div>
- </section> <section id="podpiska" class="white medium blueseparator">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<div class="title">
-					 Подпишитесь на новости и будьте в курсе -
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="input-group">
- <input placeholder="Введите e-mail" type="text" class="form-control"> <span class="input-group-addon">
-					<div>
- <input class="button1" type="submit" value="Получать новости" name="">
-					</div>
- </span>
-				</div>
-			</div>
-		</div>
-	</div>
- </section> <section id="about" class="white big">
+ </section> 
+
+<?$APPLICATION->IncludeComponent("bitrix:iblock.element.add.form", "email", Array(
+	"CUSTOM_TITLE_DATE_ACTIVE_FROM" => "",	// * дата начала *
+		"CUSTOM_TITLE_DATE_ACTIVE_TO" => "",	// * дата завершения *
+		"CUSTOM_TITLE_DETAIL_PICTURE" => "",	// * подробная картинка *
+		"CUSTOM_TITLE_DETAIL_TEXT" => "",	// * подробный текст *
+		"CUSTOM_TITLE_IBLOCK_SECTION" => "",	// * раздел инфоблока *
+		"CUSTOM_TITLE_NAME" => "",	// * наименование *
+		"CUSTOM_TITLE_PREVIEW_PICTURE" => "",	// * картинка анонса *
+		"CUSTOM_TITLE_PREVIEW_TEXT" => "",	// * текст анонса *
+		"CUSTOM_TITLE_TAGS" => "",	// * теги *
+		"DEFAULT_INPUT_SIZE" => "30",	// Размер полей ввода
+		"DETAIL_TEXT_USE_HTML_EDITOR" => "N",	// Использовать визуальный редактор для редактирования подробного текста
+		"ELEMENT_ASSOC" => "CREATED_BY",	// Привязка к пользователю
+		"GROUPS" => array(	// Группы пользователей, имеющие право на добавление/редактирование
+			0 => "2",
+		),
+		"IBLOCK_ID" => "9",	// Инфоблок
+		"IBLOCK_TYPE" => "feedback",	// Тип инфоблока
+		"LEVEL_LAST" => "Y",	// Разрешить добавление только на последний уровень рубрикатора
+		"LIST_URL" => "",	// Страница со списком своих элементов
+		"MAX_FILE_SIZE" => "0",	// Максимальный размер загружаемых файлов, байт (0 - не ограничивать)
+		"MAX_LEVELS" => "100000",	// Ограничить кол-во рубрик, в которые можно добавлять элемент
+		"MAX_USER_ENTRIES" => "100000",	// Ограничить кол-во элементов для одного пользователя
+		"PREVIEW_TEXT_USE_HTML_EDITOR" => "N",	// Использовать визуальный редактор для редактирования текста анонса
+		"PROPERTY_CODES" => array(	// Свойства, выводимые на редактирование
+			0 => "NAME",
+		),
+		"PROPERTY_CODES_REQUIRED" => array(	// Свойства, обязательные для заполнения
+			0 => "NAME",
+		),
+		"RESIZE_IMAGES" => "N",	// Использовать настройки инфоблока для обработки изображений
+		"SEF_MODE" => "N",	// Включить поддержку ЧПУ
+		"STATUS" => "ANY",	// Редактирование возможно
+		"STATUS_NEW" => "N",	// Деактивировать элемент
+		"USER_MESSAGE_ADD" => "",	// Сообщение об успешном добавлении
+		"USER_MESSAGE_EDIT" => "",	// Сообщение об успешном сохранении
+		"USE_CAPTCHA" => "N",	// Использовать CAPTCHA
+	),
+	false
+);?>
+
+  <section id="about" class="white big">
 	<div class="container">
 		<div class="row">
  <section class="white medium">
@@ -466,7 +478,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
  <a href="malto:info@oculus48.ru">info@oculus48.ru</a>
 								</div>
 								<div class="col-xs-6 all-right">
- <a class="button1" data-toggle="modal" data-target="#myModal" style="cursor:pointer;">Записаться на прием</a>
+									 <a class="button1" data-toggle="modal" data-target="#myModal" style="cursor:pointer;" >Записаться на прием</a>
 								</div>
 							</div>
 						</div>
@@ -477,21 +489,5 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 	</div>
 	 <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A80f513680b558ed1b23e481bbe3b1285ce63bea4bdb1e3a5ef811793431c648c&amp;width=100%&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script> </section>
 </div>
- <script type="text/javascript">
-	function autoMaxHeight(array_object)
-	{
-		var maxHeight = 0;
-		for(i=0;i<array_object.length;i++)
-		{
-			if(array_object[i].clientHeight > maxHeight)
-			{
-				maxHeight = array_object[i].clientHeight;
-			}
-		}
-		for(i=0;i<array_object.length;i++)
-		{
-			array_object[i].style.height = maxHeight + 'px';
-		}
-	}
-	autoMaxHeight(document.querySelectorAll('#uslugi .item'));
-</script> <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+
+ <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

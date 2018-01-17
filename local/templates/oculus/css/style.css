@@ -135,11 +135,11 @@ button.button1-off
 	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
 	background-color: #e2e2e2;
-	padding: 10px 20px;
+	padding: 0px 20px !important;
 	color: #333333;
 	font-size: 16px;
 	font-weight: 500;
-	line-height: 36px;
+	line-height: 36px !important;
 	transition: 300ms;
 }
 button.button1-off:hover
@@ -162,7 +162,7 @@ input.button1,a.button1
 	color: #333333;
 	font-size: 16px;
 	font-weight: 500;
-	line-height: 36px;
+	line-height: 36px !important;
 	transition: 300ms;
 }
 input.button1:hover,a.button1:hover
@@ -189,7 +189,7 @@ a.button3:hover
 {
 	background-color: #b7b7b7;
 }
-input.zapis
+input.zapis,textarea.zapis
 {
 	width: 100%;
 	font-family: Montserrat;
@@ -201,8 +201,9 @@ input.zapis
 	border:0;
 	border-bottom:1px solid #d4d4d4;
 	outline:none;
+	resize: none;
 }
-input.zapis:active
+input.zapis:active,textarea.zapis:active
 {
 	border-bottom:1px solid #bcbcbc;
 }
@@ -246,6 +247,11 @@ h2,h1
 	line-height: 24px;
 	padding: 25px 0;
 }
+h1.no-top
+{
+	padding: 0 0 25px 0 !important;
+	margin:0 0 20px 0 !important;
+}
 h2.caption,h1
 {
 	position: relative;
@@ -288,6 +294,14 @@ h3
 /*
 HEADER
 */
+#main-menu-fix
+{
+	position: fixed;
+	top:0;
+	width: 100%;
+	z-index: 100;
+	display: none;
+}
 .phone-number
 {
 	font-size: 24px;
@@ -306,7 +320,7 @@ HEADER
 	display: inline-block;
 	width: 80px;
 	height: 32px;
-	line-height: 32px;
+	line-height: 32px !important;
 }
 #header .specs-txt
 {
@@ -398,15 +412,28 @@ HEADER
 {
 	display: none;
 	position: absolute;
-	top:40px;
+	top:35px;
 	left: 0;
 	padding: 26px 90px 26px 30px;
 	background-color: #fff;
 	opacity: 0.85;
+	z-index: 90;
 }
 #header .menu li .dropmenu li
 {
 	list-style: circle;
+}
+#header .menu li:hover > .dropmenu
+{
+	display: block;
+}
+#header .menu a:hover ~ .dropmenu
+{
+	display: block;
+}
+#header .menu .dropmenu:hover
+{
+	display: block;
 }
 #header .menu li .dropmenu a
 {
@@ -853,6 +880,7 @@ END CART
 /*
 DOP MENU
 */
+
 #footer .footer-menu
 {
 	
@@ -1219,7 +1247,7 @@ DOCTOR LIST
 {
 	color: #333333;
 	font-family: Montserrat;
-	font-size: 18px;
+	font-size: 24px;
 	font-weight: 500;
 	line-height: 24px;
 }
@@ -1241,8 +1269,32 @@ DOCTOR LIST
 }
 #doctor-list .link
 {
-
+	position: relative;
+	top: 40px;
 }
 /*
 END DOCTOR LIST
 */
+#toTop {
+
+position:fixed;
+bottom:10px; /* отступ кнопки от нижнего края страницы*/
+right:10px;
+cursor:pointer;
+box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+background-color: #f5e42a;
+padding: 10px 20px;
+color: #333333;
+font-size: 16px;
+font-weight: 500;
+line-height: 36px !important;
+transition: 300ms;
+padding: 0 20px;
+opacity: 0;
+}
+#toTop:hover
+{
+	text-decoration: none;
+	background-color: #f4c100;
+}

@@ -2,6 +2,15 @@
 $rsSites = CSite::GetByID(SITE_ID);
 $arSite = $rsSites->Fetch();
 $curPage = $APPLICATION->GetCurPage(false);
+$url = explode('/', $curPage);
+$pages = array(
+    0 => "news",
+    1 => "diagnostics",
+    2 => "doctor",
+    3 => "operations",
+    4 => "service",
+    );
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,6 +23,7 @@ $curPage = $APPLICATION->GetCurPage(false);
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/bootstrap/css/bootstrap.min.css');
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/bootstrap/css/bootstrap-theme.min.css');
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/css/style.css');
+    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/css/animate.css');
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/owl-carousel/owl.carousel.css');
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/owl-carousel/owl.theme.css');
 
@@ -65,7 +75,7 @@ $curPage = $APPLICATION->GetCurPage(false);
  <span> <img src="<?= SITE_TEMPLATE_PATH ?>/img/specs.png"> </span>
                 </div>
                 <div class="all-center specs-txt">
- <a class="color-black" href="#">Версия для слабовидящих</a>
+ <a style="cursor: pointer;" class="color-black" id="button_spec_vision">Версия для слабовидящих</a>
                 </div>
             </div>
             <div class="col-xs-5">
@@ -131,6 +141,8 @@ $curPage = $APPLICATION->GetCurPage(false);
         </div>
     </div>
  </section>
+    
+
     <script type="text/javascript">
             document.querySelector('.menu-on').addEventListener('click', function(){
                 mobileMenu();
@@ -162,7 +174,7 @@ $curPage = $APPLICATION->GetCurPage(false);
 	"top-menu", 
 	array(
 		"ALLOW_MULTI_SELECT" => "N",
-		"CHILD_MENU_TYPE" => "top",
+		"CHILD_MENU_TYPE" => "",
 		"COMPONENT_TEMPLATE" => "top-menu",
 		"DELAY" => "N",
 		"MAX_LEVEL" => "1",
@@ -177,3 +189,22 @@ $curPage = $APPLICATION->GetCurPage(false);
 	false
 );?>
 </div>
+	<? if(!in_array($url[1], $pages) and $curPage != '/'): ?>
+	   <?$APPLICATION->IncludeComponent(
+            "bitrix:breadcrumb",
+            "brids",
+            Array(
+                "PATH" => "",
+                "SITE_ID" => "s1",
+                "START_FROM" => "0"
+            )
+        );?>
+
+       <section class="white medium blueseparator">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+    <? endif ?>
+
+   
+					

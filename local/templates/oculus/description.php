@@ -5,4 +5,4 @@ $arTemplate = array (
   'SORT' => '',
   'TYPE' => '',
 );
-?> 
+?>

@@ -3,8 +3,8 @@ $aMenuLinks = Array(
 	Array(
 		"Главная", 
 		"/", 
-		Array(), 
-		Array(), 
+		Array("/"), 
+		Array("0"=>"Заголовок1"), 
 		"" 
 	),
 	Array(
@@ -31,8 +31,8 @@ $aMenuLinks = Array(
 	Array(
 		"Операции", 
 		"/operations/", 
-		Array(), 
-		Array(), 
+		Array("/operations/lazernaya-korrektsiya-zreniya/"), 
+		Array("0"=>"Лазерная коррекция зрения"), 
 		"" 
 	),
 	Array(
