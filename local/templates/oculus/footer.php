@@ -630,9 +630,27 @@ $('body,html').animate({scrollTop:0},800);
         {
             array_object[i].style.height = maxHeight + 'px';
         }
+
     }
     autoMaxHeight(document.querySelectorAll('#uslugi .item'));
     autoMaxHeight(document.querySelectorAll('#news-list .item'));
+    autoMaxHeight(document.querySelectorAll('#news .new'));
+</script>
+
+<script language="javascript">
+function CallPrint() {
+  var prtContent = document.querySelector('h1');
+  console.log(prtContent);
+  var WinPrint = window.open('','','left=50,top=50,width=800,height=640,toolbar=0,scrollbars=1,status=0');
+  WinPrint.document.write('<div id="print" class="contentpane">');
+  WinPrint.document.write(prtContent.innerHTML);
+  WinPrint.document.write('</div>');
+  WinPrint.document.close();
+  WinPrint.focus();
+  WinPrint.print();
+  WinPrint.close();
+}
+document.getElementById('print-now').onclick = function(){ CallPrint();  };
 </script>
 </body>
 </html>

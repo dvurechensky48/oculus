@@ -65,7 +65,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 		<div class="row">
 			<div class="col-md-6">
 				<h2 class="caption">Наши услуги</h2>
-				<div>
+				<div id="print-content" >
 					 У нас вы можете пройти медицинское обследование, получить консультацию терапевта или узкого специалиста – детского офтальмолога.
 				</div>
 				<div class="margin-top-2">

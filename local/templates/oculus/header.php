@@ -50,7 +50,7 @@ $pages = array(
                  г. Липецк, ул. Липовская, д.1а Пн-Пт 8:00-20:00, Сб 9:00-14:00, Вс - выходной
             </div>
             <div class="col-xs-6 all-right">
- <a class="color-white hover-ser" href="#"><span class="glyphicon glyphicon-print"></span></a>
+ <a id="print-now" title="Распечатать проект" class="color-white hover-ser" style="cursor: pointer;"><span class="glyphicon glyphicon-print"></span></a>
             </div>
         </div>
         <div class="row hidden-lg hidden-md">
@@ -75,7 +75,7 @@ $pages = array(
  <span> <img src="<?= SITE_TEMPLATE_PATH ?>/img/specs.png"> </span>
                 </div>
                 <div class="all-center specs-txt">
- <a style="cursor: pointer;" class="color-black" id="button_spec_vision">Версия для слабовидящих</a>
+ <a class="color-black" id="button_spec_vision">Версия для слабовидящих</a>
                 </div>
             </div>
             <div class="col-xs-5">

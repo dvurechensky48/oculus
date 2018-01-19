@@ -3,8 +3,8 @@ $aMenuLinks = Array(
 	Array(
 		"Главная", 
 		"/", 
-		Array("/"), 
-		Array("0"=>"Заголовок1"), 
+		Array("/about/", "/video/?clear_cache=Y", "/oms/?clear_cache=Y"), 
+		Array("0"=>"О нас", "1"=>"Видео", "2"=>"ОМС"), 
 		"" 
 	),
 	Array(
@@ -12,6 +12,13 @@ $aMenuLinks = Array(
 		"/news/", 
 		Array(), 
 		Array(), 
+		"" 
+	),
+	Array(
+		"Заболевания", 
+		"/diseases/", 
+		Array("/diseases/dalnozorkost/", "/diseases/glaukoma/", "/diseases/katarakta/", "/diseases/blizorukost/", "/diseases/astigmatizm/", "/diseases/detskaya-glaukoma/"), 
+		Array("0"=>"Дальнозоркость", "1"=>"Глаукома", "2"=>"Катаракта", "3"=>"Близорукость", "4"=>"Астигматизм", "5"=>"Детская глаукома"), 
 		"" 
 	),
 	Array(
@@ -31,8 +38,8 @@ $aMenuLinks = Array(
 	Array(
 		"Операции", 
 		"/operations/", 
-		Array("/operations/lazernaya-korrektsiya-zreniya/"), 
-		Array("0"=>"Лазерная коррекция зрения"), 
+		Array("/operations/ostanovka-progressirovaniya-blizorukosti/", "/operations/lazernaya-korrektsiya-zreniya/", "/operations/lechenie-glaukomy/", "/operations/lechenie-katarakty/"), 
+		Array("0"=>"Остановка прогрессирования близорукости", "1"=>"Лазерная коррекция зрения", "2"=>"Лечение глаукомы", "3"=>"Лечение катаракты"), 
 		"" 
 	),
 	Array(
@@ -43,8 +50,8 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"О нас", 
-		"/about/", 
+		"Ортокератология", 
+		"/ortokeratologiya/", 
 		Array(), 
 		Array(), 
 		"" 
